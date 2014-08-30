@@ -48,6 +48,26 @@ namespace CSharp_Aula4{
             }
             //fim exercício 1
 
+            Console.WriteLine("\n\n\n");
+
+            //início exercício 2
+            Console.WriteLine("Escreva um programa que exiba o seguinte menu para o usuário e realize o que se pede.\n1 – Calcular a média de 2 notas\n2 – Calcular a média de 3 notas\n3 – Calcular a média de 4 notas\n");
+            Console.Write("Quantidade de notas a calcular: ");
+            int quantidade_notas;
+
+            quantidade_notas = int.Parse(Console.ReadLine());
+            decimal[] notas = new decimal[quantidade_notas];
+            decimal nota_final = 0;
+            for (int i = 1; i <= quantidade_notas; i++)
+            {
+                Console.Write("Nota {0}:", i);
+                notas[i - 1] = decimal.Parse(Console.ReadLine());
+                nota_final = nota_final + notas[i - 1];
+            }
+            nota_final = nota_final / quantidade_notas;
+            Console.WriteLine("\nA média é: {0}", nota_final);
+            //fim exercício 2
+
             Console.ReadKey();
         }
     }
