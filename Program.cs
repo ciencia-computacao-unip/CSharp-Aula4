@@ -68,6 +68,51 @@ namespace CSharp_Aula4{
             Console.WriteLine("\nA média é: {0}", nota_final);
             //fim exercício 2
 
+            Console.WriteLine("\n\n\n");
+
+            //início exercício 3
+            Console.WriteLine("3) Escreva um programa que que para o usuário digitar um número entre 1 e 7. Utilizando o switch...case exiba por extenso o dia da semana correspondente a cada número (por exemplo: caso o usuário digite 1 deverá exibir “Domingo”).");
+            Console.Write("Digite um número: ");
+            int numero_semana = 0;
+            string dia_semana = "";
+            bool ex3_erro = false;
+            numero_semana = int.Parse(Console.ReadLine());
+            switch (numero_semana)
+            {
+                case 1:
+                    dia_semana = "Domingo";
+                    break;
+                case 2:
+                    dia_semana = "Segunda-Feira";
+                    break;
+                case 3:
+                    dia_semana = "Terça-Feira";
+                    break;
+                case 4:
+                    dia_semana = "Quarta-Feira";
+                    break;
+                case 5:
+                    dia_semana = "Quinta-Feira";
+                    break;
+                case 6:
+                    dia_semana = "Sexta-Feira";
+                    break;
+                case 7:
+                    dia_semana = "Sábado";
+                    break;
+                default:
+                    ex3_erro = true;
+                    break;
+            }
+            if (ex3_erro == false)
+            {
+                Console.WriteLine("O dia da semana é: {0}", dia_semana);
+            }
+            else
+            {
+                Console.WriteLine("Erro: Digite um número de 1 a 7.");
+            }
+            //fim exercício 3
             Console.ReadKey();
         }
     }
