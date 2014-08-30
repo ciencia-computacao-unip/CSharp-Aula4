@@ -8,6 +8,7 @@ namespace CSharp_Aula4{
     class Program{
         static void Main(string[] args){
 
+            Console.ReadKey();
         }
     }
 }
